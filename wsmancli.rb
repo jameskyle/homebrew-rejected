@@ -1,9 +1,9 @@
-require 'formula'
+require "formula"
 
 class Wsmancli < Formula
-  homepage 'https://github.com/Openwsman/wsmancli'
-  url 'https://github.com/Openwsman/wsmancli/archive/v2.3.0.tar.gz'
-  sha1 '161288cbc4f5a60a2d683d96ead3a0934a9c5523'
+  homepage "https://github.com/Openwsman/wsmancli"
+  url "https://github.com/Openwsman/wsmancli/archive/v2.3.1.tar.gz"
+  sha1 "a9b3dbe14d257687da4ace7c142e829c05c80994"
 
   depends_on "openwsman"
   depends_on "autoconf"   => :build
@@ -18,6 +18,6 @@ class Wsmancli < Formula
   end
 
   test do
-    system "wsman --help"
+    system "wsman", "--help"
   end
 end
