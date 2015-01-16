@@ -1,5 +1,3 @@
-require 'formula'
-
 class Wsmancli < Formula
   homepage 'https://github.com/Openwsman/wsmancli'
   url 'https://github.com/Openwsman/wsmancli/archive/v2.3.0.tar.gz'
@@ -10,6 +8,7 @@ class Wsmancli < Formula
   depends_on "automake"   => :build
   depends_on "libtool"    => :build
   depends_on "pkg-config" => :build
+  depends_on :openssl
 
   def install
     system "./bootstrap"
