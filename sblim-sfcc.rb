@@ -14,21 +14,24 @@ class SblimSfcc < Formula
   end
 
   def test
-    # no executables, test to see if the man page has been installed
-    system "man -W CMCIClient"
 
 
-  # based on the test at https://github.com/Homebrew/homebrew/blob/master/Library/Formula/tinyxml.rb#L59
-  # attempting to satisfy https://github.com/jameskyle/homebrew-rejected/pull/5/files#r23105097
+  # based on the test at
   test do
+    (testpath/"test.xml").write <<-EOS.undent
+      <?xml version="1.0" ?>
+      <Hello>World</Hello>
+    EOS
     (testpath/"test.cpp").write <<-EOS.undent
-      #include <cimc.h>
+      #include <tinyxml.h>
       int main()
       {
+        TiXmlDocument doc ("test.xml");
+        doc.LoadFile();
         return 0;
       }
     EOS
-    system ENV.cxx, "test.cpp", "-lcimc", "-o", "test"
+    system ENV.cxx, "test.cpp", "-ltinyxml", "-o", "test"
     system "./test"
   end
 
