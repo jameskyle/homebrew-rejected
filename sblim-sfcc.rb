@@ -6,7 +6,7 @@ class SblimSfcc < Formula
   depends_on :libtool
   depends_on :autoconf
   depends_on :automake
-  depends_on :openssl
+  depends_on "openssl"
 
   def install
     system "./configure","--prefix=#{prefix}", "--disable-dependency-tracking"

@@ -9,7 +9,7 @@ class Openwsman < Formula
   depends_on "autoconf"   => :build
   depends_on "libtool"    => :build
   depends_on "pkg-config" => :build
-  depends_on :openssl
+  depends_on "openssl"
 
   def install
     system "./autoconfiscate.sh"
