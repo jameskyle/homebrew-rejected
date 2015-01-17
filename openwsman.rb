@@ -48,7 +48,7 @@ class Openwsman < Formula
     EOS
 
     # should be able to open and parse the a config file
-    system "openwsmand --config-file=openwsman.conf"
+    system "openwsmand", "--config-file=openwsman.conf"
   end
 
 
