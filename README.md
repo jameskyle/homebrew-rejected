@@ -1,7 +1,7 @@
 homebrew-rejected
 =================
 
-Some 'open wsman' formulas I've written that were [rejected by homebrew core](https://github.com/Homebrew/homebrew/pull/32116).
+Some 'open wsman' formulas I've written that were [previously rejected by homebrew core](https://github.com/Homebrew/homebrew/pull/32116) - but are now available in homebrew.
 
 - sblim-sfcc
 - openwsman
@@ -10,15 +10,17 @@ Some 'open wsman' formulas I've written that were [rejected by homebrew core](ht
 
 ### Installation
 
-Tap this repository:
+( No longer need to tap this repository first )
 
-    brew tap jameskyle/homebrew-rejected
-
-Now you can install what you need with homebrew:
+Install what you need with homebrew:
 
     brew install wsmancli
     brew install sblim-sfcc
     brew install openwsman
+
+### Pull Requests
+
+It's probably best to make pull reqs against my homebrew fork as that is the one that the main project pull request is made from -> https://github.com/jameskyle/homebrew
 
 
 ### Notes
